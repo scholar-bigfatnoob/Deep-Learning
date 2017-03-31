@@ -18,6 +18,9 @@ def cross_entropy(predicted, labels):
   return -1 * np.sum(labels * np.log(predicted), axis=0)
 
 
+def relu(x):
+  return x if x > 0 else 0
+
 delta = 0.000001
 x = y = 1000000000
 for _ in range(1000000):
