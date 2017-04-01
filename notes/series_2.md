@@ -28,4 +28,19 @@ a softmax function. This becomes a hidden layer.
 the predicted and actual output(say ∆) is used to update the weights.
 * The weights are updated backwards(output layer to input layer) using a learning rate
  and its derivative(gradients).
-* These weights are then used for the (i+1)th generation. 
+* These weights are then used for the (i+1)th generation.
+* Due to the advantage of back propagation, it makes more sense to build deeper models than wider ones.
+
+### L2 - Regularization
+* Used to ensure that the model does not overfit with large values of weights.
+* Mathematically, loss is updated by adding a regularization parameter ß multiplied with the L2 norm.
+* i.e `Loss = Loss + ß*(||W||^2)/2`
+ 
+### Dropout regularization
+* Randomly half the inputs from one layer to the other layer is assigned to 0.
+* This way the model 
+  * does not memorize a rule
+  * prevents overfitting.
+  * Forces the model to use an ensemble of rules for classification.
+
+  
