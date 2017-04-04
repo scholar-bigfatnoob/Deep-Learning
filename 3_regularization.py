@@ -54,7 +54,7 @@ NUM_LABELS = 10
 
 
 def reformat(dataset, labels):
-  dataset = np.reshape(dataset, (-1, IMAGE_SIZE * IMAGE_SIZE))
+  dataset = np.reshape(dataset, (-1, IMAGE_SIZE * IMAGE_SIZE)).astype(np.float32)
   labels = (np.arange(NUM_LABELS) == labels[:, None]).astype(np.float32)
   return dataset, labels
 train_dataset, train_labels = reformat(train_dataset, train_labels)
